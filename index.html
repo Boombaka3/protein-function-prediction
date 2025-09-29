@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protein Function Prediction Project</title>
+<style>
+    :root {
+        --primary-color: #2c3e50;
+        --accent-color: #3498db;
+        --bg-color: #f4f4f9;
+        --card-bg: #ffffff;
+        --text-color: #333333;
+        --heading-color: #2c3e50;
+        --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: var(--font);
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    header h1 {
+        color: var(--primary-color);
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    header h2 {
+        color: var(--accent-color);
+        font-weight: normal;
+        font-size: 1.2rem;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    section {
+        background-color: var(--card-bg);
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    h3 {
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        border-bottom: 2px solid var(--accent-color);
+        display: inline-block;
+        padding-bottom: 3px;
+    }
+
+    ul {
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    a {
+        color: var(--accent-color);
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 10px;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        header h2 {
+            font-size: 1rem;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Protein Function Prediction from UniProt Sequences</h1>
+    <h2>Qixuan Wu</h2>
+</header>
+
+<div class="container">
+
+<section>
+    <h3>Abstract</h3>
+    <p>
+        Protein function prediction has become an important area in bioinformatics, as experimental identification of protein roles is often slow and expensive. Computational methods can help bridge this gap by predicting protein function directly from sequences. In this project, a dataset of about 5,000 proteins was collected and cleaned from UniProt. The plan is to test different approaches, including machine learning models and newer deep learning models such as CNNs or Transformers, depending on the feasibility with the available resources. The results will be measured by accuracy and related evaluation metrics. The goal is to explore practical methods for sequence-based protein analysis and see which ones are most effective under the given dataset size and constraints.
+    </p>
+</section>
+
+<section>
+    <h3>Plan of Action</h3>
+    <ul>
+        <li><strong>Dataset:</strong> UniProt/Swiss-Prot (<a href="https://www.uniprot.org/help/downloads" target="_blank">link</a>).</li>
+        <li><strong>Data preprocessing:</strong> parse FASTA and XML, clean data, encode amino acid sequence.</li>
+        <li><strong>Implementation:</strong>
+            <ul>
+                <li>Baseline classifier: Logistic Regression or simple feed-forward NN</li>
+                <li>Sequence models: CNN and/or a lightweight Transformer</li>
+            </ul>
+        </li>
+        <li><strong>Comparison:</strong> Compare model performance between baselines and deep learning models.</li>
+        <li><strong>Experiments:</strong> Train/test split evaluation. Measure classification accuracy, precision, recall, F1-score.</li>
+        <li><strong>Workload Distribution:</strong> All steps performed by Qixuan Wu</li>
+    </ul>
+</section>
+
+<section>
+    <h3>References</h3>
+    <ul>
+        <li>The UniProt Consortium. "UniProt: the universal protein knowledgebase." Nucleic Acids Research (2017).</li>
+        <li>Asgari, Ehsaneddin, and Mohammad R.K. Mofrad. "Continuous distributed representation of biological sequences for deep proteomics and genomics." PLoS One (2015).</li>
+        <li>Rao, Roshan et al. "Evaluating protein transfer learning with TAPE." Advances in Neural Information Processing Systems (2019).</li>
+        <li>Elnaggar, Ahmed et al. "ProtTrans: towards cracking the language of life’s code through self-supervised deep learning and high performance computing." IEEE Transactions on Pattern Analysis and Machine Intelligence (2021).</li>
+    </ul>
+</section>
+
+</div>
+
+</body>
+</html>
